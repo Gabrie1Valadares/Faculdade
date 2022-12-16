@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARRAY E VETORES</title>
+</head>
+
+<body>
+  <!-- <div id="exibe_resultado">Resultado da Multiplicação: </div>-->
+</body>
+<script type="text/javascript">
+  //Composição dos vetores
+  var frutas = ['Laranja', 'Uva', 'Limão'];
+
+  //Criação de vetores em JavaScript
+  var alunos = [] //array vazio
+
+  var alunos = ['Alex', 'Anna', 'João']; //array de strings
+
+  var notas = ['10.0', '9.5', '8.0']; //array de números decimais
+
+  var misturas = ['Um', '2', '3', 'Quatro']; //array de diversos tipo de dados
+
+  //Acesso e exibição de elementos do vetor
+  var alunos = new Array();
+  var alunos = new Array('Alex', 'Anna', 'João');
+
+  var alunos = ['Alex', 'Anna', 'João']; //array de strings
+  alert(alunos[0]); //exibira "Alex" na caixa de diálogo
+
+  //Acesso e exibição de elementos do vetor
+  alunos.push('Helena');
+
+  alunos.push('Helena', 'Maria');
+
+  frutas[frutas.length] = 'Maria';
+
+  //Outras formas de adicionar elementos a um vetor
+  var alunos = ['Alex', 'Anna', 'João', 'Helena'];
+  alunos.splice(3, 0, 'Helena');
+  alert(alunos); //imprimirá 'Alex', 'Anna', 'João', 'Helena'
+
+  //Além disso, com esse método também é possível substituir um dos elementos do array. Veja o exemplo a seguir:
+  var alunos = ['Alex', 'Anna', 'João'];
+  alunos.splice(1, 1, 'Helene');
+  alert(alunos); //imprimirá 'Alex', 'Helena', 'João'
+
+  //Remoção de elementos do vetor
+  delete frutas[0];
+
+  frutas.pop();
+
+  frutas.shift();
+
+  //Para tanto, ele recebe como parâmetros a quantidade de elementos que se deseja eliminar e o índice a partir do qual estes serão excluídos.
+  //o primeiro parâmetro indica o índice e o segundo, a quantidade de elementos a serem excluídos.
+  var primos = [2, 3, 5, 7, 11, 13, 17];
+  primos.splice(2, 2);
+  alert(primos); //Imprimirá 2,3,11,13,17
+
+  //Outras formas de remover elementos do vetor
+  //Uma forma simples é determinar o tamanho, utilizando a propriedade length, do array. Isso fará com que este seja reduzido ao novo tamanho informado.
+  var primos = [2, 3, 5, 7, 11, 13, 17];
+  alert(primos.length); //Imprimirá "7"
+  primos.length = 4
+  alert(primos.length); //Imprimirá 4
+
+</script>
+
+</html>

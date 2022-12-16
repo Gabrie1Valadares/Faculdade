@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORMULARIO</title>
+</head>
+
+<body>
+</body>
+<form action="pagina-processa-dados-do-form" method="post">
+
+  <fieldset>
+    <legend>Dados Gerais</legend>
+    <label for="nome">Nome:</label>
+    <input type="text" minlength="3" id="nome" nome="nome" required />
+
+    <label for="data_nascimento">Data de Nascimento: </label>
+    <input type="text" id="data_nascimneto" name="data_nascimento" />
+
+    <label for="cpf">CPF:</label>
+    <input type="cpf" maxlength="11" id="cpf" name="cpf" required />
+
+    <label for="tel">Tel. celular</label>
+    <input type="text" maxlength="13" id="tel" placeholder="11-99999-9999" pattern="[0-9] {2}-[0-5]-[0-9] {4}" required>
+  </fieldset>
+
+  <fieldset>
+    <legend>Endereço</legend>
+
+    <label for="Tipo_endereco">Tipo</label>
+    <select id="tipo_endereco">
+      <option value="">Selecione</option>
+      <option value="rua">Rua</option>
+      <option value="Estrada">Estrada</option>
+      <option value="rodovia">Rodovia</option>
+      <option value="outro">Outro</option>
+    </select>
+
+    <label for="logardouro_endereco">Logadouro:</label>
+    <input type="text" id="numero_endereco" />
+
+    <label for="numero_endereco">N°:</label>
+    <input type="complemento_endereco" id="complemennto_endereco" />
+  </fieldset>
+
+  <fieldset>
+    <legend>Fale conosco</legend>
+    <label for="tipo_msg">Tipo de Mensagem:</label>
+
+
+    <input type="radio" name="tipo_msg" value="Sugestão"><label>Sugestão</label>
+
+    <input type="radio" name="tipo_msg" value="Crítica">
+    <label>Crítica</label>
+
+    <input type="radio" name="tipo_msg" value="Elogio">
+    <label>Elogio</label>
+
+    <label for="msg">Mensagem:</label>
+    <textarea id="msg"></textarea>
+  </fieldset>
+
+  <fieldset>
+    <button type="submit">Enviar sua mensagem</button>
+    <button type="reset">Limpar o formulário</button>
+  </fieldset>
+</form>
+
+
+</html>

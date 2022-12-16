@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divisão</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var numeros = [];
+
+    numeros[0] = solicitaPrimeiroNumero();
+    numeros[1] = solicitaSegundoNumero();
+
+    var resultadoDivisao = divida(numeros);
+
+    alert('O resultado da Divisão é igual a: ' + resultadoDivisao);
+
+    /* Função JavaScript
+       Esta função não recebe Parâmetros
+       */
+    function solicitaPrimeiroNumero() {
+      var numero1 = prompt('Insira o primeiro Número; ');
+
+      if (numero1 < 0) {
+        alert("O número precisa ser inteiro e positivo");
+        //Este tipo de retorno, onde a própria função é chamada novamente, é conhecido como recursividade
+        return solicitaPrimeiroNumero();
+      } else {
+        return numero1
+      }
+    }
+
+    function solicitaSegundoNumero() {
+      var numero2 = prompt("Insira o segundo número: ");
+
+      if (numero2 < 0) {
+        alert("O número precisa ser inteiro e positivo");
+
+        return solicitaSegundoNumero()
+
+      } else {
+        return numero2
+      }
+    }
+
+    /*Esta função como parâmetro um array - que contém os 2 nùmeros que desejamos dividir */
+    function divida(numeros) {
+      var resultado = 0;
+      //Os números a serem divididos são acessados através dos índices do array
+      resultado = numeros[0] / numeros[1];
+
+      return resultado;
+
+    }
+
+    location.reload()
+
+
+
+  </script>
+</body>
+
+</html>
